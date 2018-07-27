@@ -1,7 +1,11 @@
 # React GDL-2018-1
 
-Así es querida estudiante, has llegado a la recta final del Bootcamp. En este momento has aprendido tantas cosas que no cabrían en una sola hoja (por eso no todas van en tu CV).
-Pero ¡qué crees! esto no se acaba, hasta que se acaba.
+Así es querida estudiante, has llegado a la recta final del Bootcamp. 
+
+En este momento has aprendido tantas cosas que no cabrían en una sola hoja (por esono todas van en tu CV).
+
+Pero... ¡qué crees! esto no se acaba, hasta que se acaba.
+
 Ha llegado el momento de ser un pony grande y aprender REACT.js 
 
 ![image alt](https://media.giphy.com/media/aQYR1p8saOQla/giphy.gif)
