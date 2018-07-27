@@ -26,7 +26,6 @@ Revisa a detalle los requerimientos del [Proyecto Final >Biflix](./proyectos/bif
 
 ### Taller: [Tic-Tac-Toe](https://reactjs.org/tutorial/tutorial.html)
 > Duración: 2 días (Martes-Miércoles)
-
 > Descripción: Durante esta sesión el equipo de coaches junto a las estudiantes profundizaremos en el uso de React.js mientras seguimos el tutorial oficial de REACT.js hecho con amor <3.
 
 ![](https://media.giphy.com/media/3ohhwf3mprga8qAIOQ/giphy.gif)
@@ -34,11 +33,8 @@ Revisa a detalle los requerimientos del [Proyecto Final >Biflix](./proyectos/bif
 
 ### Proyecto 1: [Lista de Tareas](./proyectos/tasklist.md)
 > Duración: 2 días + Fin de Semana (Jueves-Lunes)
-
 > [Solucionario](./solucionario/tasklist/README.md): Lunes
-
 > Descripción: Crea tu lista de tareas con React, almacenala en Firebase, y publica tu aplicación en el _hosting_ de tu preferencia.
-
 > ![](https://media.giphy.com/media/xTiTnuhyBF54B852nK/giphy.gif)
 
 Temas:
