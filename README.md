@@ -28,6 +28,7 @@ Revisa a detalle los requerimientos del [Proyecto Final >Biflix](./proyectos/bif
 > Duración: 2 días (Martes-Miércoles)
 
 > Descripción: Durante esta sesión el equipo de coaches junto a las estudiantes profundizaremos en el uso de React.js mientras seguimos el tutorial oficial de REACT.js hecho con amor <3.
+
 ![](https://media.giphy.com/media/3ohhwf3mprga8qAIOQ/giphy.gif)
 
 
