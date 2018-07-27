@@ -25,18 +25,23 @@ Revisa a detalle los requerimientos del [Proyecto Final >Biflix](./proyectos/bif
 - BUSCAR VIDEOS PARA COMPLEMENTAR
 
 ### Taller: [Tic-Tac-Toe](https://reactjs.org/tutorial/tutorial.html)
-> Duración: 2 días (Martes-Miércoles)
-> Descripción: Durante esta sesión el equipo de coaches junto a las estudiantes profundizaremos en el uso de React.js mientras seguimos el tutorial oficial de REACT.js hecho con amor <3.
+Duración: 2 días (Martes-Miércoles)
+
+Descripción: Durante esta sesión el equipo de coaches junto a las estudiantes profundizaremos en el uso de React.js mientras seguimos el tutorial oficial de REACT.js hecho con amor <3.
 
 ![](https://media.giphy.com/media/3ohhwf3mprga8qAIOQ/giphy.gif)
-
+---
 
 ### Proyecto 1: [Lista de Tareas](./proyectos/tasklist.md)
-> Duración: 2 días + Fin de Semana (Jueves-Lunes)
-> [Solucionario](./solucionario/tasklist/README.md): Lunes
-> Descripción: Crea tu lista de tareas con React, almacenala en Firebase, y publica tu aplicación en el _hosting_ de tu preferencia.
-> ![](https://media.giphy.com/media/xTiTnuhyBF54B852nK/giphy.gif)
 
+Duración: 2 días + Fin de Semana (Jueves-Lunes)
+
+[Solucionario](./solucionario/tasklist/README.md): Lunes
+
+Descripción: Crea tu lista de tareas con React, almacenala en Firebase, y publica tu aplicación en el _hosting_ de tu preferencia.
+
+![](https://media.giphy.com/media/xTiTnuhyBF54B852nK/giphy.gif)
+---
 Temas:
 - JSX
 - Componentes
@@ -55,13 +60,14 @@ Temas:
 - BUSCAR VIDEOS PARA COMPLEMENTAR
 
 ### Proyecto 2: [ReactSocial](./proyectos/react-social.md)
-> Duración: 4 días (Lunes-Jueves)
+Duración: 4 días (Lunes-Jueves)
 
-> [Solucionario](./solucionario/react-social/README.md): Viernes
+[Solucionario](./solucionario/react-social/README.md): Viernes
 
-> Red Social multiusuario, con login y persistencia en bases de datos en tiempo real, has tu propio Facebook, Twitter o Instagram
+Red Social multiusuario, con login y persistencia en bases de datos en tiempo real, has tu propio Facebook, Twitter o Instagram
 
-> ![](https://media.giphy.com/media/gcajW7oKirCdW/giphy.gif)
+![](https://media.giphy.com/media/gcajW7oKirCdW/giphy.gif)
+---
 
 Temas:
 - Todo lo anterior +
@@ -74,15 +80,16 @@ Temas:
 ## Semana 3: (25 - 31 Agosto)
 
 ### Proyecto Final: [>Biflix](./proyectos/biflix.md)
-> Duración: 4 días (Lunes-Jueves)
+ Duración: 4 días (Lunes-Jueves)
 
-> [Solucionario](./solucionario/biflix/README.md): Viernes
+ [Solucionario](./solucionario/biflix/README.md): Viernes
 
-> Presentacion de proyectos: Viernes 31 Agosto
+ Presentacion de proyectos: Viernes 31 Agosto
 
-> Descripción: Recrearás una plataforma de streaming estilo Netflix, puedes usar el API de Vimeo o Youtube.
+ Descripción: Recrearás una plataforma de streaming estilo Netflix, puedes usar el API de Vimeo o Youtube.
 
-> ![](https://media.giphy.com/media/nwleaG1TObWsE/giphy.gif)
+ ![](https://media.giphy.com/media/nwleaG1TObWsE/giphy.gif)
+---
 
 Este proyecto requiere que utilices todos los conocimientos obtenidos sobre React durante las semanas anteriores.
 ¡Tu momento de brillar ha llegado!
