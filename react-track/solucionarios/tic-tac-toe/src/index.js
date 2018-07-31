@@ -7,7 +7,6 @@ https://reactjs.org/tutorial/tutorial.html#setup-option-2-local-development-envi
 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 
 // OVERVIEW 1.1 Qué chihuahuas es React.js
 class Board extends React.Component{
@@ -49,3 +48,5 @@ class Game extends React.Component{
         );
     }
 }
+
+ReactDOM.render(<Game/>,document.getElementById('root'))

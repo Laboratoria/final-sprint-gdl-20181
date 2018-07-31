@@ -30,3 +30,21 @@ Para nuestro tutorial declararemos tres componentes, aquí su descripción:
 > `render`, este se encarga de pintar en el `DOM VIRTUAL`
 > Piezas de la ReactJS app. 
 
+Si utilizas el comando `npm start` en este punto
+podrás notar que en tu navegador se ve en blanco. 
+REACT, requiere que especifiques el elemento padre
+que vas a pintar en tu navegador. 
+En el caso de nuestra aplicación, este elemento es el componente `Game`. 
+
+Para decirle a REACT que este es el componente que queremos mostrar
+hasta la ultima linea de nuestro index.js hacemos uso del método. `ReactDOM.render`, 
+el cual recibe un elemento destino del HTML 
+que por convención llamamos `root` (raíz, en español)
+y el componente. 
+
+```jsx
+    ReactDOM.render(<Game/>,document.getElementById('root'))
+```
+Agregando esto a nuestro `index.js` podremos ver algo similar a esto en nuestro navegador: 
+
+![render inicial del componente game](.\docs\imagenes\render-inicial-componente-game.png)
