@@ -23,4 +23,4 @@ Dividiremos este tutorial en cuatro secciones principales:
     * key for components.
     * Mostrando la historia en nuestra aplicación.
 
-> Para ver uno a uno los pasos del desarrollo de este tutorial, te recomendamos ir a la rama tic-tac-toe y revisar los commits realizados. Este material es de referencia, para que puedas prácticar después. Durante la clase lo haremos todas juntas. 
+> Para ver uno a uno los pasos del desarrollo de este tutorial, te recomendamos ir a la rama tic-tac-toe y revisar los commits realizados. Este material es de referencia, para que puedas prácticar después. Durante la clase lo haremos todas juntas, en esta rama encontrarás el resultado final. 
