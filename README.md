@@ -19,4 +19,4 @@ Ambas carpetas guardan el contenido y las especificaciones de las
 herramientas que se trabajarán durante las proximas 3 semanas.
 
 ¡Disfruta este tiempo, aprovechando a tus compañeras y equipo 
-de formación, a la máxima potencia!
+de formación a la máxima potencia!
