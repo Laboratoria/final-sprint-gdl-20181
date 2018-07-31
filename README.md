@@ -1,4 +1,4 @@
-#### Final Sprint GDL 2018.1
+### Final Sprint GDL 2018.1
 
 ¡Hola! 
 Bienvenida al último sprint del boot camp. Al día de hoy sabemos que 
