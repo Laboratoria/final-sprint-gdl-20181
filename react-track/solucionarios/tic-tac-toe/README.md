@@ -21,4 +21,6 @@ Dividiremos este tutorial en cuatro secciones principales:
 4. Volviendo al pasado. 
     * this.state.history
     * key for components.
-    * Mostrando la historia en nuestra aplicación. 
+    * Mostrando la historia en nuestra aplicación.
+
+> Para ver uno a uno los pasos del desarrollo de este tutorial, te recomendamos ir a la rama tic-tac-toe y revisar los commits realizados. Este material es de referencia, para que puedas prácticar después. Durante la clase lo haremos todas juntas. 
