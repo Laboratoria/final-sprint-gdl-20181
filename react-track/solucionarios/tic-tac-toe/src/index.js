@@ -9,6 +9,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-/* Al hacer esto estamos trayendo a nuestro espacio de desarrollo las funcionalidades y
-atributos de REACT y REACTDOM (La dependencia que permite manejar el DOM virtual de REACT)
-*/
+// OVERVIEW 1.1 Qué chihuahuas es React.js
+class Board extends React.Component{
+    render(){
+        return()
+    }
+}
+class Square extends React.Component{
+    render(){
+        return()
+    }
+}
+class Game extends React.Component{
+    render(){
+        
+    }
+}
