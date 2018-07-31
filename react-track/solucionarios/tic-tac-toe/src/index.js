@@ -12,16 +12,40 @@ import './index.css';
 // OVERVIEW 1.1 Qué chihuahuas es React.js
 class Board extends React.Component{
     render(){
-        return()
+        return(
+            <div>
+                <div className="row">
+                    <Square/>
+                    <Square/>
+                    <Square/>
+                </div>
+                <div className="row">
+                    <Square/>
+                    <Square/>
+                    <Square/>
+                </div>
+                <div className="row">
+                    <Square/>
+                    <Square/>
+                    <Square/>
+                </div>
+            </div>
+        );
     }
 }
 class Square extends React.Component{
     render(){
-        return()
+        return(
+            <span>
+                <button>____</button>
+            </span>
+        );
     }
 }
 class Game extends React.Component{
     render(){
-        
+        return (
+            <Board/>
+        );
     }
 }

@@ -29,3 +29,4 @@ Para nuestro tutorial declararemos tres componentes, aquí su descripción:
 > Utilizamos la palabra `pinta` para el método 
 > `render`, este se encarga de pintar en el `DOM VIRTUAL`
 > Piezas de la ReactJS app. 
+
