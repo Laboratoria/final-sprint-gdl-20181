@@ -1,1 +1,8 @@
-#React-Social
+# React-Social
+
+Requerimientos técnicos: 
+
+* 
+* 
+* 
+

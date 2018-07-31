@@ -1,1 +1,7 @@
-#Task List App
+# Task List App
+
+
+Requerimientos Técnicos: 
+
+* 
+* 
