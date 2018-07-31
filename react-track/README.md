@@ -11,7 +11,7 @@ Ha llegado el momento de ser un pony grande y aprender REACT.js
 
 ## Reto Final
 
-Revisa a detalle los requerimientos del [Proyecto Final >Biflix](./proyectos/biflix.md), creemos que te gustará mucho y es además material perfecto para un Portafolio, a continuación te presentamos las generalidades sobre como se llevará el mismo.
+Revisa a detalle los requerimientos del [Proyecto Final >Viflix](./proyectos/viflix.md), creemos que te gustará mucho y es además material perfecto para un Portafolio, a continuación te presentamos las generalidades sobre como se llevará el mismo.
 
 - Se desarrollará en equipos de 4 personas.
 - Cada semana se hará un _refresh_ sobre el producto final, asociando el reto y los temas actuales con el producto final.
@@ -75,10 +75,10 @@ Temas:
 
 ## Semana 3: (25 - 31 Agosto)
 
-### Proyecto Final: [>Biflix](./proyectos/biflix.md)
+### Proyecto Final: [>Viflix](./proyectos/viflix.md)
 > Duración: 4 días (Lunes-Jueves)
 
-> [Solucionario](./solucionario/biflix/README.md): Viernes
+> [Solucionario](./solucionario/viflix/README.md): Viernes
 
 > Presentacion de proyectos: Viernes 31 Agosto
 
