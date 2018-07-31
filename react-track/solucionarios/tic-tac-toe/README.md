@@ -9,8 +9,9 @@
 
 Dividiremos este tutorial en cuatro secciones principales:
 1. Configuración de una aplicación de REACT.js
-2. Overview 1.1 ¿Qué chihuahuas es react?
+#### Overview
 
+##### Overview 1.1 ¿Qué chihuahuas es react?
 
 React es una herramienta que permite crear interfaces de usuario eficientes e inteligentes
 a través de pequeñas `piezas de lego` llamadas `COMPONENTES`.
@@ -48,3 +49,57 @@ y el componente.
 Agregando esto a nuestro `index.js` podremos ver algo similar a esto en nuestro navegador: 
 
 ![render inicial del componente game](.\docs\imagenes\render-inicial-componente-game.png)
+
+---
+#### OVERVIEW 1.2 Propiedades (props para les amigues)
+
+La información en REACT se trasmite a través de propiedades del componente, a las cuales se les da valor desde
+el lugar donde el mismo componente es "llamado o ejecutado".
+
+Es similar a cuando hacemos la ejecución de una función y pasamos `argumentos` que son cachados
+en la definicion de la función en la forma de `parámetros`.
+
+Esto aplicado a componentes se vería así: 
+
+```jsx
+    /*Componente ancestro <Board>*/
+    class Board extends React.Component{
+    render(){
+        return(
+            <div>
+                <div className="row">
+                    <Square value = "uno"/>
+                    
+                </div>
+            <div/>
+            )
+        }
+    }
+```
+Aquí podriamos decir que estamos haciendo la ejecución de una
+funcion y "value" actua como un argumento, con valor "uno"
+
+##### Componente descendiente `<Square/>`
+
+```
+class Square extends React.Component{
+
+    render(){
+        return(
+            <span>
+                <button>{this.props.value}</button>
+            </span>
+        );
+    }
+}
+```
+En el componente `Square` se recibe el argumento `value` 
+el cual se aloja en la función constructor y tenemos que especificar que vamos a
+acceder a esta propiedad con el método `super()`
+
+> `super() y constructor()` son funciones propias de todos los componentes de REACT, son funciones `heredadas`
+al instanciar la clase con React.Component <3 
+
+
+---
+Nota al pie: si quieres agregar estilos de css, escribe una propiedad, llamada ClassName en donde van las clases luego llamadas en el main.css de tu carpeta.
