@@ -100,6 +100,34 @@ acceder a esta propiedad con el método `super()`
 > `super() y constructor()` son funciones propias de todos los componentes de REACT, son funciones `heredadas`
 al instanciar la clase con React.Component <3 
 
+#### OVERVIEW 1.3 Componentes interactivos (Eventos en REACT.js)
+
+Agregar interactividad a un componentes es muy similar a
+cuando lo hacemos con JS vainilla o cuando comenzamos
+a trabajar con eventos. 
+
+Recuerda que los componentes de REACT, se crean y actualizan al usar el metodo `render` de forma dinámica sobre un DOM virtual (como un holograma)
+
+Gracias a esta propiedad usualmente en REACT, evitamos la asignación de eventos a través del famoso `addEventListener`.
+Declarando los eventos en el momento que pintamos el componente.
+```html
+    <Square onClick={callbackClick} onBlur={calbackBlur}/>
+``` 
+Algo que habrás notado es que el evento se declaró en cammel Case, que las funciones son pasadas como propiedades del componente 
+
+```javascript
+    // En el constructor de Square haces el enlace de las callback que ocupara el componente. 
+
+    constructor(props){
+        super(props);
+        this.play = this.play.bind(this)
+    }
+    play(){
+        console.log("holiiiiiii")
+    }
+``` 
+
+
 
 ---
 Nota al pie: si quieres agregar estilos de css, escribe una propiedad, llamada ClassName en donde van las clases luego llamadas en el main.css de tu carpeta.

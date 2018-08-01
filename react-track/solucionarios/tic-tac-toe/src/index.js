@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// OVERVIEW 1.2 Propiedades (props para les amigues)
+// OVERVIEW 1.3 Componentes interactivos (react y eventos)
 
 class Board extends React.Component{
     render(){
@@ -27,11 +27,17 @@ class Board extends React.Component{
     }
 }
 class Square extends React.Component{
-
+    constructor(props){
+        super(props);
+        this.play = this.play.bind(this)
+    }
+    play(){
+        console.log("holiiiii")
+    }
     render(){
         return(
             <span>
-                <button>{this.props.value}</button>
+                <button onClick={this.play}>{this.props.value}</button>
             </span>
         );
     }
