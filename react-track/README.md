@@ -11,7 +11,7 @@ Ha llegado el momento de ser un pony grande y aprender REACT.js
 
 ## Reto Final
 
-Revisa a detalle los requerimientos del [Proyecto Final >Viflix](./proyectos/viflix.md), creemos que te gustará mucho y es además material perfecto para un Portafolio, a continuación te presentamos las generalidades sobre como se llevará el mismo.
+Revisa a detalle los requerimientos del [Proyecto Final >Viflix](./retos/viflix.md), creemos que te gustará mucho y es además material perfecto para un Portafolio, a continuación te presentamos las generalidades sobre como se llevará el mismo.
 
 - Se desarrollará en equipos de 4 personas.
 - Cada semana se hará un _refresh_ sobre el producto final, asociando el reto y los temas actuales con el producto final.
@@ -30,7 +30,7 @@ Revisa a detalle los requerimientos del [Proyecto Final >Viflix](./proyectos/vif
 ![](https://media.giphy.com/media/3ohhwf3mprga8qAIOQ/giphy.gif)
 
 
-### Proyecto 1: [Lista de Tareas](./proyectos/tasklist.md)
+### Proyecto 1: [Lista de Tareas](./retos/task-list.md)
 > Duración: 2 días + Fin de Semana (Jueves-Lunes)
 
 > [Solucionario](./solucionario/tasklist/README.md): Lunes
@@ -75,7 +75,7 @@ Temas:
 
 ## Semana 3: (25 - 31 Agosto)
 
-### Proyecto Final: [>Viflix](./proyectos/viflix.md)
+### Proyecto Final: [>Viflix](./retos/viflix.md)
 > Duración: 4 días (Lunes-Jueves)
 
 > [Solucionario](./solucionario/viflix/README.md): Viernes
