@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "./index.css"
 
 // OVERVIEW 1.3 Componentes interactivos (react y eventos)
 
@@ -30,15 +31,18 @@ class Square extends React.Component{
     constructor(props){
         super(props);
         this.play = this.play.bind(this)
+        this.state = {
+            value:""
+        }
     }
     play(){
-        console.log("holiiiii")
+        this.setState({value:"X"})
     }
     render(){
         return(
-            <span>
-                <button onClick={this.play}>{this.props.value}</button>
-            </span>
+            <div className="square">
+                <button onClick={this.play}>{this.state.value}</button>
+            </div>
         );
     }
 }

@@ -113,7 +113,7 @@ Declarando los eventos en el momento que pintamos el componente.
 ```html
     <Square onClick={callbackClick} onBlur={calbackBlur}/>
 ``` 
-Algo que habrás notado es que el evento se declaró en cammel Case, que las funciones son pasadas como propiedades del componente 
+Algo que habrás notado es que el evento se declaró en cammel Case, que las funciones son pasadas como propiedades del componente en la función constructora del componente. 
 
 ```javascript
     // En el constructor de Square haces el enlace de las callback que ocupara el componente. 
@@ -126,7 +126,25 @@ Algo que habrás notado es que el evento se declaró en cammel Case, que las fun
         console.log("holiiiiiii")
     }
 ``` 
+Si hacemos este binding y en nuestro componentes declaramos el evento onclick, cuando clickeamos cada casilla podremos ver un mensaje en consola que dice "holii"
 
+En nuestro juego el siguiente paso es recordar que alguien ha jugado.
+Cuando queremos recordar algo en REACT.js utilizamos el estado del componente o `state`. Para hacer uso de estas propiedades, en primer lugar tenemos que mostrarle al componente que existe, todas las propiedades del componente que van a modificarse segun la interacción con el usuario, son realmente partes de su estado. 
+
+En nuestro ejemplo el valor de cada casilla, los turnos, el jugador; todas estas son características del juego que estaremos modificando y deben ser propiedades del estado.
+
+```
+class Square extends React.Component{
+    constructor(props){
+        super(props);
+        this.play = this.play.bind(this);
+        this.state = {
+            value:""
+        }
+    }
+}
+```
+Cuando queramos que el estado cambie, lo podemos modificar a través del método `this.setState()` que recibe como argumento la nueva configuración del estado: Si quisiera que el nuevo valor fuera `X` modificaría el estado de esta forma `this.setState({value:"X"})`
 
 
 ---

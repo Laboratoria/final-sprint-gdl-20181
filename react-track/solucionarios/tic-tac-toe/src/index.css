@@ -1,0 +1,19 @@
+body{
+    box-sizing: border-box;
+}
+.square{
+    width: 30%;
+    height: 10vh;
+    padding: 0%;
+    display: inline-block;
+}
+.square button{
+    width: 100%;
+    height: 10vh;
+}
+.row{
+    width: 100%;
+    position: realitive;
+    display: flex;
+    flex-direction: row;
+}
