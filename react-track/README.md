@@ -24,7 +24,7 @@ Revisa a detalle los requerimientos del [Proyecto Final >Viflix](./retos/viflix.
 - Al finalizar la tercera semana se hará presentación de su producto.
 - No habrá una calificación técnica para este producto y sprint. Sin embargo esperamos que estos productos sean su preparación previa al Talent Fest.
 
-## Semana 1 (13-19 Agosto)
+## Semana 1 (12-19 Agosto)
 - Self learning: Unidades 1, 2, 3, 4 y 7 del LMS.
 - Self learning: [Documentación de conceptos de React](https://reactjs.org/docs/hello-world.html).
 - BUSCAR VIDEOS PARA COMPLEMENTAR
