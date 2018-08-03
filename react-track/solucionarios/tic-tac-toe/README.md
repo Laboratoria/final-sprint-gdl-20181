@@ -146,6 +146,95 @@ class Square extends React.Component{
 ```
 Cuando queramos que el estado cambie, lo podemos modificar a través del método `this.setState()` que recibe como argumento la nueva configuración del estado: Si quisiera que el nuevo valor fuera `X` modificaría el estado de esta forma `this.setState({value:"X"})`
 
+Para cada movimiento se debe hacer una revisión general del tablero. Pues finalmente hay una cantidad definida de jugadas que hacen a un jugador ganar.
+
+Para recoger datos de multiples hijos, o para permitir que dos componentes hijos se comuniquen entre ellos,
+ el estado compartido debe ser parte del constructor del padre. Podríamos tener
+un estado para cada componente, sí.
+ Sin embargo tenerlo de esta forma hace suceptible a errores. 
+El componente padre puede pasar el estado
+de vuelta al hijo a través de los `props`.
+
+Elevar el estado al componente padre es una practica comun cuando refactorizamos nuestras aplicaciones en REACT. 
+
+Vamos a intentarlo agregando un constructor al componente `Board`. Declaremos en el constructor el estado inicial del tablero a través de un arreglo con nueve valores nulos: 
+
+```javascript
+        constructor(props){
+        super(props)
+
+        this.state = {
+            squares: Array(9).fill(null)
+        }
+    }
+```
+En el componente BOARD vamos a generar una funcion que sea la encargada de pintar los cuadros. 
+```javascript
+class Board extends React.Component{
+    constructor(props){
+        super(props)
+
+        this.state = {
+            squares: Array(9).fill(null)
+        }
+        this.renderSquare = this.renderSquare.bind(this)
+    }
+    renderSquare(i) {
+        return <Square value={i} />;
+      }
+    render(){
+        return(
+            <div>
+                <div className="row">
+                    {this.renderSquare(1)}
+                    {this.renderSquare(2)}
+                    {this.renderSquare(3)}
+                </div>
+                <div className="row">
+                    {this.renderSquare(4)}
+                    {this.renderSquare(5)}
+                    {this.renderSquare(6)}
+                </div>
+                <div className="row">
+                    {this.renderSquare(4)}
+                    {this.renderSquare(5)}
+                    {this.renderSquare(6)}
+                </div>
+            </div>
+        );
+    }
+}
+
+```
+Ahora vamos a modificar `renderSquare` para "avisarle" a square su estado actual, así como la funcionalidad que se debe cumplir cuando `Square` sea clickeado (Sí, debemos migrar la funcion play del componente Square al componente Board)
+
+```javascript
+
+    play(i) {
+        const squares = this.state.squares.slice();
+        squares[i] = 'X';
+        this.setState({squares: squares});
+        console.log(this.state.squares)
+    }
+    renderSquare(i) {
+        return <Square value={this.state.squares[i]}
+            onClick = {()=>this.play(i)}
+         />;
+    }
+```
+Este método está buscando sobre el arreglo de cuadros, el elemento con el numero `i` que nosotras hemos enviado como un argumento. Para después sustituirlo por una X, O o Null segun sea el caso (en este momento solo por X)
+
+
+Usamos el metodo slice, para trabajar sobre una copia del arreglo existente en el estado y no sobre el original, esto porque la `inmutabilidad` de los componentes en REACT es clave. 
+
+Un componente inmutable, es un componente puro. Si evitamos modificar la data directamente podemos volver a ella en un futuro de ser requerido. Cuando veamos el historial de jugadas, esto te hará más sentido.
+
+Esto también facilita la tarea de REACT para decidir cuando es momento
+de modificar algun elemento y sobre todo, no re-pintar elementos
+ya existentes. 
+[Información que cura: Why inmmutability is important](https://reactjs.org/tutorial/tutorial.html#why-immutability-is-important)
+
+
 
 ---
 Nota al pie: si quieres agregar estilos de css, escribe una propiedad, llamada ClassName en donde van las clases luego llamadas en el main.css de tu carpeta.
