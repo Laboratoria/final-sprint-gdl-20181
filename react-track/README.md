@@ -9,6 +9,12 @@ Ha llegado el momento de ser un pony grande y aprender REACT.js
 > **_Pre-requisito_**: Para completar esta unidad satisfactoriamente necesitas comprender los conceptos de
 [A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript).
 
+## Calendario
+
+![](calendar/Week1.png)
+![](calendar/Week2.png)
+![](calendar/Week3.png)
+
 ## Reto Final
 
 Revisa a detalle los requerimientos del [Proyecto Final >Viflix](./retos/viflix.md), creemos que te gustará mucho y es además material perfecto para un Portafolio, a continuación te presentamos las generalidades sobre como se llevará el mismo.
