@@ -272,6 +272,68 @@ intercambiar el valor de xIsNext.
     
     }
 ```
+### ¿Quién gana?
+
+Ahora que mostramos de cual jugador es el siguiente turno, debemos darle un fin al juego.
+Mostrar cuando no hay más casillas por jugar y quien ha ganado el juego. 
+Para determinar el ganador podemos agregar una función auxiliar al final de nuestro archivo js. 
+```javascript
+function whoWon(squares) {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (let i = 0; i < lines.length; i++) {
+    //   Destructuración de un arreglo
+    const [a, b, c] = lines[i];
+    console.log(a)
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      return squares[a];
+    }
+  }
+  return null;
+}
+```
+Vamos a llamar a la función calculateWinner(squares) en el render de la función para verificar si el jugador actual a ganado, podemos mostras un texto como "El jugador X ha ganado" o "El jugador O ha ganado". 
+
+Vamos a remplazar la declaración de "Jugador Actual/Ganador" en el método
+render del tablero con este codigo.
+
+```javascript
+        const winner = whoWon(this.state.squares);
+        let status;
+        if (winner) {
+          status = 'Winner: ' + winner;
+        } else {
+          status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+        }
+```
+
+Ahora modificaremos el handleclick del tablero para ignorar futuros clicks
+si alguien ya ha clickeado esa casilla o hay un ganador. 
+```javascript
+ play(i) {
+     const squares = this.state.squares.slice();
+        if (whoWon(squares) || squares[i]) {
+          return;
+        }
+        squares[i] = this.state.xIsNext ? 'X' : 'O';
+        this.setState({
+          squares: squares,
+          xIsNext: !this.state.xIsNext,
+    });
+}
+
+
+```
+
+
 
 
 
