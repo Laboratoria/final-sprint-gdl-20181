@@ -234,6 +234,51 @@ de modificar algun elemento y sobre todo, no re-pintar elementos
 ya existentes. 
 [Información que cura: Why inmmutability is important](https://reactjs.org/tutorial/tutorial.html#why-immutability-is-important)
 
+#### Tomar Turnos 
+
+Ahora debemos arreglar un defecto obvio en nuestro tic-tac-toe. No estamos tomando turnos, la "O" nunca se pinta.
+
+Hemos establecido el primero movimiento para que sea "X" por default.
+Podemos configurar este default a través del estado inicial del
+componente board en el constructor.
+
+Cada vez que un jugador mueva la propiedad xIsNext del estado, nos dirá si 
+el siguiente jugador es o no una X (true o false). Vamos a agregar
+la propiedad xIsNext y a modificar el handleClick para
+intercambiar el valor de xIsNext.
+
+```javascript
+        constructor(props){
+        super(props)
+
+        this.state = {
+            squares: Array(9).fill(null),
+            //Aquí
+            xIsNext: true,
+
+        }
+        this.renderSquare = this.renderSquare.bind(this)
+        this.play = this.play.bind(this)
+    }
+    play(i) {
+        const squares = this.state.squares.slice();
+        // Aquí
+        squares[i] = this.state.xIsNext ? 'X' : 'O';
+        this.setState({
+          squares: squares,
+          // y Aquí
+          xIsNext: !this.state.xIsNext,
+        });
+    
+    }
+```
+
+
+
+
+
+
+
 
 
 ---
