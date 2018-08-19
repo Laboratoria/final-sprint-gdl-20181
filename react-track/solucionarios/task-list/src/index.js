@@ -4,7 +4,7 @@ import * as firebase from 'firebase';
 
 import './index.css';
 import List from './List';
-import Login from './Login';
+import Authentication from './Authentication';
 
 // Initialize Firebase
 firebase.initializeApp({
@@ -19,19 +19,34 @@ firebase.initializeApp({
 class App extends React.Component {
     constructor(props){
         super(props);
+        
         this.state = {
             user: null,
+        }
+        
+        this.handleAuthStateChange = this.handleAuthStateChange.bind(this);
+        firebase.auth().onAuthStateChanged(this.handleAuthStateChange);
+    }
+    
+    handleAuthStateChange(User) {
+        if (User) {
+            this.setState({user:User});
+        } else {
+            this.setState({user:null});
         }
     }
     
     render() {
-        if ( this.state.user!==null ) {
-            return <List user={this.state.user}/>;
+        if ( this.state.user !== null ) {
+            return <main>
+                <button type="button" onClick={()=>firebase.auth().signOut()}>Sign Out</button>
+                <List user={this.state.user}/>
+            </main>;
         } else {
-            return <Login />;
+            return <Authentication />;
         }
     }
     
 }
 // ========================================
-ReactDOM.render( <App />, document.getElementById('root') );
+ReactDOM.render( <App/>, document.getElementById('root') );
