@@ -5,11 +5,15 @@ class Authentication extends React.Component {
 
     constructor(props){
         super(props);
+        
         this.state={
             emailInput: "",
             passwordInput:"",
             error:"",
         }
+        
+        /* Permanently binding events callbacks to this(Authentication)
+        it also serves to differentiate callbacks from functions */
         this.handleCreate      = this.handleCreate.bind(this);
         this.handleSignIn      = this.handleSignIn.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -26,12 +30,13 @@ class Authentication extends React.Component {
             <input id="emailInput" type="text" value={this.state.emailInput} onChange={this.handleInputChange} />
             <label htmlFor="passwordInput">Password:</label>
             <input id="passwordInput" type="password" value={this.state.passwordInput} onChange={this.handleInputChange} />
-            <input type="button" value="New User" onClick={this.handleCreate} />
-            <input type="button" value="Sign In" onClick={this.handleSignIn} />
+            <button type="button" onClick={this.handleCreate}>New User</button>
+            <button type="button" onClick={this.handleSignIn}>Sign In</button>
         </div>;
     }
     
     handleCreate(){
+        /* Straight cut&paste from firebase tutorial */
         firebase.auth()
         .createUserWithEmailAndPassword(this.state.emailInput, this.state.passwordInput)
         .catch( (error) => {
@@ -40,6 +45,7 @@ class Authentication extends React.Component {
     }
 
     handleSignIn(){
+        /* Straight cut&paste from firebase tutorial */
         firebase.auth()
         .signInWithEmailAndPassword(this.state.emailInput, this.state.passwordInput)
         .catch( (error) => {
