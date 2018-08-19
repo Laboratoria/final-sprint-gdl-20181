@@ -1,6 +1,7 @@
 ### Final Sprint GDL 2018.1
 
 ¡Hola! 
+
 Bienvenida al último sprint del boot camp. Al día de hoy sabemos que 
 has aprendido un millar de cosas que te ayudarán a construir una solida
 carrera en el mundo profesional tech. 
