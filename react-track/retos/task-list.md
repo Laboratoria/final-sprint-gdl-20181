@@ -2,7 +2,7 @@
 
 Ya antes hiciste un Trello donde podías añadir y quitar tareas de una lista. ¿Recuerdas como tuviste que manejar todos los cambios de la lista a mano? Bueno pues ahora con [ReactJs](https://reactjs.org/) puedes utilizar el poder de ésta biblioteca para que los cambios en la lista se vean reflejados automáticamente. No solo eso, aprenderás a separar los datos de la representación visual de la misma, facilitando su manejo de formas alternativas. Como por ejemplo, guardar los datos directamente en la base de datos en tiempo real [Firebase](https://firebase.google.com/).
 
-![](https://media.giphy.com/media/xTiTnuhyBF54B852nK/giphy.gif)
+![](assets/todo.gif)
 
 **Duración:** Para este reto tendrás 2 días en tiempo de clase donde deberás explotar a tus coaches para resolver todas tus dudas, solucionar bugs y aprender todo lo que puedas, así como un fin de semana completo para entregar ese extra que distinga tu producto.
  
@@ -41,6 +41,8 @@ Una vez que el usuario haya hecho _login_ desearás mostrar la lista de tareas y
 
 ![](mockups/task-list/v02.png)
 
+> Ten siempre en cuenta el articulo en [Thinking In React](https://reactjs.org/docs/thinking-in-react.html) mientras desarrollas, te ahorrará mucho trabajo y evitará problemas a futuro.
+
 Tu aplicación deberá de constar de un `input`, un botón de **_add_** y una lista de tareas por hacer. Al dar _click_ en **_add_** se deberá de añadir la tarea en el tope de la lista, **tal vez te parezca complejo hacer esto con React, pero no temas, es un ejemplo tan común que encontrarás miles de ejemplos en Internet donde comenzar**, el más sencillo y directo está en [la página de inicio de ReactJS.org](https://reactjs.org/)
 
 Por supuesto no servirá de mucho solo mostrar las tareas y que se pierdan a recargar la página, para almacenarlas persistentemente puedes seguir estos tutoriales oficiales de Firebase:
@@ -52,45 +54,41 @@ Te sugerimos seguir una estructura similar a esta para poder manejar todos los r
 
 ```json
 "userid1": {
-	"tasks": {
-		"-pXQX5ZykpETZcB8H": {
-			"order": 1,
-			"done": false,
-			"text": "Pick up the milk"
-		},
-		"-7r7V2h8hVAs2YhMm": {
-			"order": 2,
-			"done": true,
-			"text": "Conquest the world"
-		},
-		"-Vuc4wHMZvbfcddPk": {
-			"order": 3,
-			"done": false,
-			"text": "Binge watch Luis Miguel"
-		},
-	}
+	"-pXQX5ZykpETZcB8H": {
+		"order": 1,
+		"done": false,
+		"text": "Pick up the milk"
+	},
+	"-7r7V2h8hVAs2YhMm": {
+		"order": 2,
+		"done": true,
+		"text": "Conquest the world"
+	},
+	"-Vuc4wHMZvbfcddPk": {
+		"order": 3,
+		"done": false,
+		"text": "Binge watch Luis Miguel"
+	},
 },
 "userid2": {
-	"tasks": {
-		"-YzrEzH2PMe7QyMM4": {
-			"order": 1,
-			"done": false,
-			"text": "End world poverty"
-		},
-		"-mT9R3xxP87e8qNtw": {
-			"order": 2,
-			"done": true,
-			"text": "Revive Freddy Mercury"
-		},
-		"-byr6EZwpRyABBM8G": {
-			"order": 3,
-			"done": false,
-			"text": "Bringback disco"
-		},
-	}
+	"-YzrEzH2PMe7QyMM4": {
+		"order": 1,
+		"done": false,
+		"text": "End world poverty"
+	},
+	"-mT9R3xxP87e8qNtw": {
+		"order": 2,
+		"done": true,
+		"text": "Revive Freddy Mercury"
+	},
+	"-byr6EZwpRyABBM8G": {
+		"order": 3,
+		"done": false,
+		"text": "Bringback disco"
+	},
 }
 ```
-> Las cadenas tipo "-pXQX5ZykpETZcB8H" usadas como llave se crean automaticamente al crear un nuevo elemento siguiendo las instrucciones de [Append to a list of data](https://firebase.google.com/docs/database/web/lists-of-data#append_to_a_list_of_data) en la documentación oficial.
+> Las cadenas tipo "-pXQX5ZykpETZcB8H" usadas como llave se crean automáticamente al crear un nuevo elemento siguiendo las instrucciones de [Append to a list of data](https://firebase.google.com/docs/database/web/lists-of-data#append_to_a_list_of_data) en la documentación oficial.
 
 #### Versión 0.2.1: Un toque de UX.
 
