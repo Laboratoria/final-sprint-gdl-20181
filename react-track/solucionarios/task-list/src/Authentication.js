@@ -53,7 +53,8 @@ class Authentication extends React.Component {
         });
     }
 
-    //Generic function to enable binding of values to any input
+    /* Generic function to enable binding of values to any input
+    https://github.com/react-toolbox/react-toolbox/issues/652 */
     handleInputChange(event){
         //event.target.id == emailInput as in this.state.emailInput
         this.setState({ [event.target.id]: event.target.value });
