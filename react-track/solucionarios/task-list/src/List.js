@@ -61,7 +61,6 @@ class List extends React.Component {
 		/** We fill the new data with the needed data **/
 		const newTask = data.val();
 		newTask.id= data.key
-		console.log(newTask);
 		
 		/** We create a copy of the array to be patched **/
 		var newTasks = this.state.tasks.concat([]);
@@ -75,7 +74,6 @@ class List extends React.Component {
 	}
 
 	handleChildRemoved(data){
-		console.log(data.val());
 		/** We create a copy of the array to be patched **/
 		var newTasks = this.state.tasks.concat([]);
 		const index = newTasks.findIndex(task=> task.id=== data.key);
