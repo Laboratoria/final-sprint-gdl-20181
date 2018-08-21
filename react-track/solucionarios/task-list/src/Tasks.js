@@ -8,7 +8,8 @@ function Tasks(props) {
             id={task.id}
             text={task.text}
             done={task.done}
-            onCheck={props.onCheck}/>
+            onCheck={props.onCheck}
+            onDelete={props.onDelete}/>
         ))}
         </div>
     );
@@ -16,9 +17,10 @@ function Tasks(props) {
 
 function Task(props) {
     return (
-        <div className="task">
-        <input type="checkbox" id={props.id} onChange={props.onCheck} checked={props.done}/>
+        <div className="task" id={props.id}>
+        <input type="checkbox"  onChange={props.onCheck} checked={props.done}/>
         <label htmlFor={props.id}>{props.text}</label>
+        <div> <a href="#" onClick={props.onDelete}>delete</a></div>
         </div>
     );
 }
