@@ -28,19 +28,38 @@ class List extends React.Component {
 		
         this.handleCheck = this.handleCheck.bind(this);
 		this.handleAddTask = this.handleAddTask.bind(this);
-		this.handleNewChild = this.handleNewChild.bind(this);
-	}
-	
-	componentDidMount(){
+		this.handleChildAdded = this.handleChildAdded.bind(this);
+		this.handleChildChanged = this.handleChildChanged.bind(this);
+
 		const db = firebase.database();
         this.tasksRef = db.ref().child(`tasks/${this.props.user.uid}`);
-        this.tasksRef.on('child_added', this.handleNewChild);
+	}
+	
+	/** To avoid adding tasks to a not yet mounted component, we don't bind the firebase callbacks until it mounts**/
+	componentDidMount(){
+		this.tasksRef.on('child_added', this.handleChildAdded);
+		this.tasksRef.on('child_changed', this.handleChildChanged);
 	}
 
-	handleNewChild(data){
+	handleChildAdded(data){
 		const newTask = data.val();
 		newTask.id= data.key
 		var newTasks = this.state.tasks.concat(newTask);
+		this.setState({ tasks: newTasks })
+	}
+
+	handleChildChanged(data){
+		/** We fill the new data with the needed data **/
+		const newTask = data.val();
+		newTask.id= data.key
+		console.log(newTask);
+		
+		/** We create a copy of the array to be patched **/
+		var newTasks = this.state.tasks.concat([]);
+		const index = newTasks.findIndex(task=> task.id=== data.key);
+		newTasks.splice(index,1,newTask);
+		
+		/** We finally rewrite the array**/
 		this.setState({ tasks: newTasks })
 	}
 
@@ -56,7 +75,11 @@ class List extends React.Component {
 	}
 	
     handleCheck(e){
-        /**TODO **/
+		console.log(e.target.value);
+		const taskRef = this.tasksRef.child(e.target.id);
+		taskRef.update({
+			done: e.target.checked
+		});
     }
     
     render (){
