@@ -1,4 +1,5 @@
 import React from 'react';
+import Task from './Task'
 
 function Tasks(props) {
     return (
@@ -15,13 +16,4 @@ function Tasks(props) {
     );
 }
 
-function Task(props) {
-    return (
-        <div className="task" id={props.id}>
-        <input type="checkbox"  onChange={props.onCheck} checked={props.done}/>
-        <label htmlFor={props.id}>{props.text}</label>
-        <div> <a href="#" onClick={props.onDelete}>delete</a></div>
-        </div>
-    );
-}
 export default Tasks;

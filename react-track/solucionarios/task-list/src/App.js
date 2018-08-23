@@ -17,10 +17,10 @@ class App extends React.Component {
         firebase.auth().onAuthStateChanged(this.handleAuthStateChange);
     }
     
-    handleAuthStateChange(User) {
+    handleAuthStateChange(user) {
         /* As simple as it gets */
-        if (User) {
-            this.setState({user:User});
+        if (user) {
+            this.setState({user:user});
         } else {
             this.setState({user:null});
         }

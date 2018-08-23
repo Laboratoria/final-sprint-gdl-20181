@@ -36,9 +36,9 @@ class List extends React.Component {
 		this.handleChildChanged = this.handleChildChanged.bind(this);
 		this.handleChildRemoved = this.handleChildRemoved.bind(this);
 
-		/** Reference for this user **/
+		/** Reference for this user Tasks**/
 		const db = firebase.database();
-        this.tasksRef = db.ref().child(`tasks/${this.props.user.uid}`);
+		this.tasksRef = db.ref().child(`tasks/${this.props.user.uid}`);
 	}
 	
 
@@ -51,8 +51,11 @@ class List extends React.Component {
 	}
 
 	handleChildAdded(data){
+		/** The node content is in .val() **/
 		const newTask = data.val();
+		/** We need the id to be able to edit/delete so we store it in the object **/
 		newTask.id= data.key
+		/** we use concat to add the new task to a copy of the array **/
 		var newTasks = this.state.tasks.concat(newTask);
 		this.setState({ tasks: newTasks })
 	}
