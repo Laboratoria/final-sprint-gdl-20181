@@ -6,12 +6,15 @@ class Task extends React.Component{
         super(props);
         this.state = {
             editing: false,
-            text: this.props.text,
+            text: '',
         }
         this.makeEditable= this.makeEditable.bind(this);
         this.handleCancel = this.handleCancel.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleEdit = this.handleEdit.bind(this);      
+        this.handleEdit = this.handleEdit.bind(this);   
+        this.handleKeyUp = this.handleKeyUp.bind(this);
+
+        this.inputRef = React.createRef();
     }
     
     handleInputChange(e){
@@ -20,7 +23,7 @@ class Task extends React.Component{
 
     makeEditable(e) {
         e.preventDefault();
-        this.setState({editing: true});
+        this.setState({editing: true, text: this.props.text});
     }
     
     handleCancel(e) {
@@ -34,24 +37,31 @@ class Task extends React.Component{
         this.setState({editing:false});
     }
 
-    /*componentDidMount(){
-        this.nameInput.focus(); 
-     }*/
+    handleKeyUp(e){
+		if(e.keyCode===13) this.handleEdit(e);
+	}
+
+    componentDidUpdate(){
+        if (this.state.editing) {
+            console.log('updating');
+            this.inputRef.current.focus();
+        }
+    }
 
     render(){
         if(this.state.editing){
             return (
                 <div className="task" id={this.props.id}>
-                    <input type="text" autoFocus value={this.state.text} onChange={this.handleInputChange}/><br/>
-                    <div className="button-bar"> <a href="#" onClick={this.handleCancel}>cancel</a> || <a href="#" onClick={this.handleEdit}>save</a></div>
+                    <input ref={this.inputRef} type="text" id={`input-${this.props.id}`} value={this.state.text} onKeyUp={this.handleKeyUp} onChange={this.handleInputChange}/>
+                    <div className="button-bar"> <button type="button" onClick={this.handleCancel}>cancel</button> <button type="button" onClick={this.handleEdit}>save</button></div>
                 </div>
             );
         } else {
             return (
                 <div className="task" id={this.props.id}>
-                    <input type="checkbox" id={`label-${this.props.id}`} onChange={this.props.onCheck} checked={this.props.done}/>
-                    <label htmlFor={`label-${this.props.id}`}>{this.props.text}</label><br/>
-                    <div className="button-bar"> <a href="#" onClick={this.makeEditable}>edit</a> || <a href="#" onClick={this.props.onDelete}>delete</a></div>
+                    <input type="checkbox" id={`check-${this.props.id}`} onChange={this.props.onCheck} checked={this.props.done}/>
+                    <label htmlFor={`check-${this.props.id}`}>{this.props.text}</label>
+                    <div className="button-bar"> <button onClick={this.makeEditable}>edit</button> <button onClick={this.props.onDelete}>delete</button></div>
                 </div>
             );
         }
