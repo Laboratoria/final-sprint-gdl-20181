@@ -30,6 +30,7 @@ class List extends React.Component {
 		this.handleCheck = this.handleCheck.bind(this);
 		this.handleDelete = this.handleDelete.bind(this);
 		this.handleAddTask = this.handleAddTask.bind(this);
+		this.handleEdit = this.handleEdit.bind(this);
 		
 		/** Firebase events */
 		this.handleChildAdded = this.handleChildAdded.bind(this);
@@ -116,12 +117,18 @@ class List extends React.Component {
 		const taskRef = this.tasksRef.child(parent.id);
 		taskRef.remove();
 	}
-    
-    render (){
+    handleEdit(text, id) {
+		const taskRef = this.tasksRef.child(id);
+		taskRef.update({
+			text: text
+		});
+	}
+
+	render (){
         return (
             <section className="list">
             <AddForm onAdd={this.handleAddTask} />
-            <Tasks  tasks={this.state.tasks} onDelete={this.handleDelete} onCheck={this.handleCheck}/>
+            <Tasks  tasks={this.state.tasks} onDelete={this.handleDelete} onEdit={this.handleEdit} onCheck={this.handleCheck}/>
             </section>
         );
     }

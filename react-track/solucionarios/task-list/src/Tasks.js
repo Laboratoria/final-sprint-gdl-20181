@@ -10,7 +10,8 @@ function Tasks(props) {
             text={task.text}
             done={task.done}
             onCheck={props.onCheck}
-            onDelete={props.onDelete}/>
+            onDelete={props.onDelete}
+            onEdit={props.onEdit} />
         ))}
         </div>
     );

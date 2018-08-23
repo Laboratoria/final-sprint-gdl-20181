@@ -3,6 +3,7 @@ import firebase from 'firebase';
 
 import List from './List';
 import Authentication from './Authentication';
+import './app.css';
 
 class App extends React.Component {
     constructor(props){

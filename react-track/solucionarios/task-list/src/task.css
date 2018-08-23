@@ -1,0 +1,8 @@
+.task{
+    border: 1px solid gray;
+    padding: 1em;
+    margin: 1em;
+}
+.task .button-bar {
+    text-align: right;
+}
